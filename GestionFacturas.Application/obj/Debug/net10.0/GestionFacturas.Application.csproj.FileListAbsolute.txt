@@ -1,0 +1,15 @@
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.csproj.AssemblyReference.cache
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.AssemblyInfoInputs.cache
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.AssemblyInfo.cs
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.csproj.CoreCompileInputs.cache
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\bin\Debug\net10.0\GestionFacturas.Application.deps.json
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\bin\Debug\net10.0\GestionFacturas.Application.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\bin\Debug\net10.0\GestionFacturas.Application.pdb
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\bin\Debug\net10.0\GestionFacturas.Domain.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\bin\Debug\net10.0\GestionFacturas.Domain.pdb
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionF.D26940AB.Up2Date
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\refint\GestionFacturas.Application.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\GestionFacturas.Application.pdb
+C:\Proyectos\GestionFacturas\GestionFacturas.Application\obj\Debug\net10.0\ref\GestionFacturas.Application.dll

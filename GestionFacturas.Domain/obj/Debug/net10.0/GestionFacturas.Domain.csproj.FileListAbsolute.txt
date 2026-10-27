@@ -1,0 +1,11 @@
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\bin\Debug\net10.0\GestionFacturas.Domain.deps.json
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\bin\Debug\net10.0\GestionFacturas.Domain.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\bin\Debug\net10.0\GestionFacturas.Domain.pdb
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\GestionFacturas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\GestionFacturas.Domain.AssemblyInfoInputs.cache
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\GestionFacturas.Domain.AssemblyInfo.cs
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\GestionFacturas.Domain.csproj.CoreCompileInputs.cache
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\GestionFacturas.Domain.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\refint\GestionFacturas.Domain.dll
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\GestionFacturas.Domain.pdb
+C:\Proyectos\GestionFacturas\GestionFacturas.Domain\obj\Debug\net10.0\ref\GestionFacturas.Domain.dll
