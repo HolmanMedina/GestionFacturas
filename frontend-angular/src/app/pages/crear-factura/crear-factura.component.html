@@ -1,0 +1,196 @@
+<div class="form-page">
+
+  <div class="page-header">
+
+    <div>
+
+      <span class="eyebrow">
+        FACTURACIÓN
+      </span>
+
+      <h1>
+        {{
+ modoEdicion
+          ? 'Editar factura'
+          : 'Nueva factura'
+        }}
+      </h1>
+
+      <p>
+        {{
+          modoEdicion
+            ? 'Modifica la información de la factura.'
+            : 'Registra una nueva factura para un cliente.'
+        }}
+      </p>
+
+    </div>
+    <button class="btn-volver"
+            type="button"
+            (click)="volver()">
+      ← Volver a facturas
+    </button>
+
+  </div>
+
+
+  <div class="form-card">
+
+    <div class="form-section">
+
+      <h2>
+        Información de la factura
+      </h2>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+
+          <label>
+            Cliente
+            <span>*</span>
+          </label>
+
+          <select [(ngModel)]="factura.clienteId">
+
+            <option value="">
+              Selecciona un cliente
+            </option>
+
+            <option *ngFor="let cliente of clientes"
+                    [value]="cliente.id">
+
+              {{ cliente.nombre }}
+              -
+              {{ cliente.id }}
+
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Número de factura
+            <span>*</span>
+          </label>
+
+          <input type="text"
+                 [(ngModel)]="factura.numeroFactura"
+                 placeholder="Ej: FAC-007">
+
+        </div>
+
+
+        <div class="form-group full">
+
+          <label>
+            Descripción
+            <span>*</span>
+          </label>
+
+          <textarea rows="4"
+                    [(ngModel)]="factura.descripcion"
+                    placeholder="Descripción de la factura o servicio...">
+          </textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Valor
+            <span>*</span>
+          </label>
+
+          <input type="number"
+                 min="1"
+                 [(ngModel)]="factura.valor"
+                 placeholder="0">
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Fecha de vencimiento
+            <span>*</span>
+          </label>
+
+          <input type="date"
+                 [(ngModel)]="factura.fechaVencimiento">
+
+        </div>
+
+
+        <div class="form-group"
+             *ngIf="modoEdicion">
+
+          <label>
+            Estado
+          </label>
+
+          <select [(ngModel)]="factura.estado">
+
+            <option [ngValue]="0">
+              Pendiente
+            </option>
+
+            <option [ngValue]="1">
+              Primer recordatorio
+            </option>
+
+            <option [ngValue]="2">
+              Segundo recordatorio
+            </option>
+
+            <option [ngValue]="3">
+              Desactivado
+            </option>
+
+            <option [ngValue]="4">
+              Pagada
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="form-footer">
+
+      <button class="btn-secondary"
+              type="button"
+              (click)="cancelar()">
+
+        Cancelar
+
+      </button>
+
+
+      <button class="btn-primary"
+              type="button"
+              (click)="guardar()">
+
+        {{
+          modoEdicion
+            ? 'Guardar cambios'
+            : 'Crear factura'
+        }}
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\models",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\clientes",
+    "\\src\\app\\pages\\crear-factura",
+    "\\src\\app\\pages\\facturas",
+    "\\src\\app\\pages\\inicio",
+    "\\src\\app\\services"
+  ],
+  "SelectedNode": "\\src\\styles.css",
+  "PreviewInSolutionExplorer": false
+}

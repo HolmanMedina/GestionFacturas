@@ -1,0 +1,334 @@
+<div class="facturas-page">
+
+  <div class="page-header">
+
+    <div>
+
+      <span class="eyebrow">
+        GESTIÓN
+      </span>
+
+      <h1>
+        Facturas
+      </h1>
+
+      <p>
+        Consulta y administra las facturas de los clientes.
+      </p>
+
+    </div>
+
+
+    <div class="header-actions">
+
+      <button class="btn-secondary"
+              type="button"
+              (click)="procesarTodos()">
+
+        📧 Procesar recordatorios
+
+      </button>
+
+
+      <button class="btn-primary"
+              type="button"
+              (click)="nuevaFactura()">
+
+        + Nueva factura
+
+      </button>
+
+
+      <button class="btn-volver"
+              type="button"
+              (click)="volver()">
+
+        ← Volver
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="filters-card">
+
+
+    <div class="filter">
+
+      <label>
+        Buscar
+      </label>
+
+      <input type="text"
+             [(ngModel)]="busqueda"
+             (ngModelChange)="aplicarFiltros()"
+             placeholder="Factura, descripción...">
+
+    </div>
+
+
+    <div class="filter">
+
+      <label>
+        Cliente
+      </label>
+
+      <select [(ngModel)]="filtroCliente"
+              (ngModelChange)="aplicarFiltros()">
+
+        <option value="">
+          Todos los clientes
+        </option>
+
+        <option *ngFor="let cliente of clientes"
+                [value]="cliente.id">
+
+          {{ cliente.nombre }}
+
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="filter">
+
+      <label>
+        Estado
+      </label>
+
+      <select [(ngModel)]="filtroEstado"
+              (ngModelChange)="aplicarFiltros()">
+
+        <option value="">
+          Todos los estados
+        </option>
+
+        <option value="Pendiente">
+          Pendiente
+        </option>
+
+        <option value="Primer recordatorio">
+          Primer recordatorio
+        </option>
+
+        <option value="Segundo recordatorio">
+          Segundo recordatorio
+        </option>
+
+        <option value="Desactivado">
+          Desactivado
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <button class="clear-button"
+            type="button"
+            (click)="limpiarFiltros()">
+
+      Limpiar
+
+    </button>
+
+  </div>
+
+
+  <div class="table-card">
+
+
+    <div class="table-header">
+
+      <div>
+
+        <h2>
+          Listado de facturas
+        </h2>
+
+        <span>
+          {{ facturasFiltradas.length }} facturas
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+      <table>
+
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Factura
+            </th>
+
+            <th>
+              Cliente
+            </th>
+
+            <th>
+              Descripción
+            </th>
+
+            <th>
+              Valor
+            </th>
+
+            <th>
+              Vencimiento
+            </th>
+
+            <th>
+              Estado
+            </th>
+
+            <th>
+              Acciones
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody>
+
+
+          <tr *ngFor="let factura of facturasFiltradas">
+
+            <td>
+
+              <strong>
+                {{ factura.numeroFactura }}
+              </strong>
+
+              <small>
+                {{ factura.id }}
+              </small>
+
+            </td>
+
+
+            <td>
+
+              {{ obtenerNombreCliente(factura.clienteId) }}
+
+            </td>
+
+
+
+            <td>
+
+              <span class="description">
+
+                {{ factura.descripcion || 'Sin descripción' }}
+
+              </span>
+
+            </td>
+
+
+
+            <td>
+
+              {{ factura.valor | currency:'COP':'symbol':'1.0-0' }}
+
+            </td>
+
+
+
+            <td>
+
+              {{ factura.fechaVencimiento | date:'dd/MM/yyyy' }}
+
+            </td>
+
+
+
+            <td>
+
+              <span class="status"
+                    [ngClass]="claseEstado(factura.estado)">
+
+                {{ obtenerEstadoTexto(factura.estado) }}
+
+              </span>
+
+            </td>
+
+
+
+            <td>
+
+              <div class="actions">
+
+
+                <button class="action edit"
+                        type="button"
+                        title="Editar"
+                        (click)="editarFactura(factura)">
+
+                  ✏️
+
+                </button>
+
+
+                <button *ngIf="puedeProcesar(factura)"
+                        class="action process"
+                        type="button"
+                        title="Procesar recordatorio"
+                        (click)="procesarRecordatorio(factura)">
+
+                  📧
+
+                </button>
+
+
+                <button class="action delete"
+                        type="button"
+                        title="Eliminar"
+                        (click)="eliminarFactura(factura)">
+
+                  🗑️
+
+                </button>
+
+
+              </div>
+
+            </td>
+
+
+          </tr>
+
+          <tr *ngIf="facturasFiltradas.length === 0">
+
+            <td colspan="7"
+                class="empty">
+
+              No se encontraron facturas.
+
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,224 @@
+<div class="inicio-container">
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <span class="badge">
+        Sistema de gestión
+      </span>
+
+      <h1>
+        Gestión de Facturas
+      </h1>
+
+      <p>
+        Administra clientes, facturas y procesos de recordatorio
+        desde un solo lugar.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="estadisticas">
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        👥
+      </div>
+
+      <div class="stat-info">
+
+        <span class="stat-title">
+          Clientes
+        </span>
+
+        <strong>
+          {{ totalClientes }}
+        </strong>
+
+      </div>
+
+    </div>
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        📄
+      </div>
+
+      <div class="stat-info">
+
+        <span class="stat-title">
+          Total facturas
+        </span>
+
+        <strong>
+          {{ totalFacturas }}
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        ⏳
+      </div>
+
+      <div class="stat-info">
+
+        <span class="stat-title">
+          Pendientes
+        </span>
+
+        <strong>
+          {{ facturasPendientes }}
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        🔔
+      </div>
+
+      <div class="stat-info">
+
+        <span class="stat-title">
+          En recordatorio
+        </span>
+
+        <strong>
+          {{ facturasRecordatorio }}
+        </strong>
+
+      </div>
+
+    </div>
+
+    <div class="stat-card">
+
+      <div class="stat-icon">
+        🚫
+      </div>
+
+      <div class="stat-info">
+
+        <span class="stat-title">
+          Desactivadas
+        </span>
+
+        <strong>
+          {{ facturasDesactivadas }}
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="modulos">
+
+    <h2>
+      Módulos del sistema
+    </h2>
+
+    <p class="subtitulo">
+      Selecciona el módulo que deseas administrar.
+    </p>
+
+
+    <div class="modulos-grid">
+
+
+      <div class="modulo-card">
+
+        <div class="modulo-icon">
+          👥
+        </div>
+
+        <h3>
+          Clientes
+        </h3>
+
+        <p>
+          Administra los clientes registrados,
+          sus datos de contacto y estado.
+        </p>
+
+        <div class="acciones">
+
+          <button class="btn-primary"
+                  (click)="irAClientes()">
+
+            Administrar clientes
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+      <div class="modulo-card">
+
+        <div class="modulo-icon">
+          📄
+        </div>
+
+        <h3>
+          Facturas
+        </h3>
+
+        <p>
+          Consulta, crea, modifica y elimina facturas.
+          También puedes procesar los recordatorios.
+        </p>
+
+        <div class="acciones">
+
+          <button class="btn-primary"
+                  (click)="irAFacturas()">
+
+            Administrar facturas
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section class="informacion">
+
+    <div>
+
+      <h2>
+        Gestión centralizada
+      </h2>
+
+      <p>
+        Desde este sistema puedes administrar la información
+        de clientes y facturas, consultar estados y ejecutar
+        el proceso de recordatorios de pago.
+      </p>
+
+    </div>
+
+  </section>
+
+</div>
